@@ -34,3 +34,4 @@ data_structure = [
 
 global_rezult = calculate_structure_sum(data_structure)
 print(global_rezult)
+# endprogramm
