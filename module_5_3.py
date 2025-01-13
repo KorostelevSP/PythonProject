@@ -56,12 +56,12 @@ class House:
     def __iadd__(self, value):
         if not isinstance(value, int):
             raise ArithmeticError("Операнд должен быть типом int")
-        return self + value
+        return self.__add__(value)
 
     def __radd__(self, value):
         if not isinstance(value, int):
             raise ArithmeticError("Операнд должен быть типом int")
-        return self + value
+        return self.__add__(value)
 
 h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
