@@ -7,7 +7,7 @@ class Animal:
     live = True
     sound = None
     _DEGREE_OF_DANGER = 0
-    def __init__(self,_cords = [0, 0, 0], speed=0 ):
+    def __init__(self,_cords = [0, 0, 0],speed=0):
         self._cords = _cords
         self.speed  = speed
 
@@ -38,6 +38,8 @@ class Bird(Animal):
 
 class AquaticAnimal(Animal):
     _DEGREE_OF_DANGER = 3
+    def __init__(self,speed):
+        super().__init__([0, 0, 0],speed)
     def dive_in(self, dz):
         self.speed = self.speed/2
         dz = abs(dz)*self.speed
@@ -46,7 +48,7 @@ class AquaticAnimal(Animal):
 class PoisonousAnimal(Animal):
     _DEGREE_OF_DANGER = 8
     def __init__(self,speed):
-        super().__init__([0,0,0],speed)
+        super().__init__(speed)
 
 class Duckbill(PoisonousAnimal,Bird,AquaticAnimal):
     sound = "Click-click-click"
@@ -61,7 +63,7 @@ print(db.beak)
 
 db.speak()
 db.attack()
-
+print(db._cords)
 db.move(1, 2, 3)
 db.get_cords()
 
