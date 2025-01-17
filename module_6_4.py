@@ -7,11 +7,11 @@ from math import pi, sqrt
 class Figure:
     sides_count = 0
 
-    def __init__(self, color, *sides):
+    def __init__(self, color, *sides,filled = False):
 
         self.__color = color  # список цветов в формате RGB
         self.__sides = sides  # Список сторон целые числа
-        #self.filled = False        #закрашенный, bool
+        self.filled = filled        #закрашенный, bool
 
     def get_color(self):
         return self.__color
