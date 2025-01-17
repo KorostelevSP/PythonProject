@@ -29,13 +29,14 @@ class Figure:
         return self.__color
 
     def __is_valid_sides(self, *new_sides):
+        checkpassed = True
         for i in new_sides:
             if i > 0:
-                if len(new_sides) == self.sides_count:
-                    return True
-
-                else:
-                    return False
+                if len(new_sides) != self.sides_count:
+                    checkpassed = False
+            else:
+                checkpassed = False
+        return  checkpassed
 
     def get_sides(self):
         return self.__sides
