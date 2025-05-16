@@ -47,5 +47,16 @@ def main():
     else:
         print('невозможно умножить')
 
+    matr_c = [[0] * len(matr_a[0]) for i in range(len(matr_a))]
+    for i in range(len(matr_a)):
+        for j in range(len(matr_a[0])):
+            matr_c[i][j] = matr_a[i][j] + matr_b[j][i]
+    print(matr_c)
+
+    for i in range(len(matr_a)):
+        for j in range(len(matr_a[0])):
+            print(str(matr_c[i][j]).rjust(2), end=' ')
+        print()
+
 if __name__ == '__main__':
     main()
