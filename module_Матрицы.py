@@ -1,13 +1,22 @@
 from math import *
 import random
+import numpy as np
 
 a = sqrt(81)
 print(a)
 
-def main():
-    # matrix = [[1,2,3],
-    #           [4,5,6],
-    #           [7,8,9]]
+a = [[1,2,3],
+     [4,5,6],
+     [7,8,9],
+     [11,12,13]]
+
+b = [[11,21,31],
+     [41,51,61],
+     [7,8,9],
+     [12,12,12]]
+
+def main_1test():
+
     # print(matrix[2][0])
     n = 3
     m = 4
@@ -57,6 +66,24 @@ def main():
         for j in range(len(matr_a[0])):
             print(str(matr_c[i][j]).rjust(2), end=' ')
         print()
+
+def main():
+    matrix1 = np.array(a)
+    matrix2 = np.array(b)
+    matrix3 = matrix1 + matrix2
+    # matrix3 = np.add(matrix1,matrix2)
+    # matrix3 = matrix1 - matrix2
+    # matrix3 = np.subtract(matrix1, matrix2)
+    # matrix3 = matrix1 * matrix2
+    # matrix3 = np.dot(matrix1, matrix2)
+    matrix3 = np.transpose(matrix3)
+    print(matrix3)
+    # matrix4 = np.zeros((3,3),dtype='int32')
+    # matrix4 = np.ones((3, 3), dtype='int32')
+    matrix4 = np.full((3, 3), 2,dtype='str')
+    # matrix4 = np.amin(a)
+    # matrix4 = np.amax(a)
+    print(matrix4)
 
 if __name__ == '__main__':
     main()
