@@ -7,6 +7,9 @@ def f2(x):
 def f3(x):
     return x**3
 
+def f5(x,n):
+    return x+n
+
 def my_map(func, my_lyst):
     new_m = []
     for i in my_lyst:
@@ -25,6 +28,13 @@ def main():
 
     rez3 = my_map(f3, m)
     print(rez3)
+
+    rez4 = list(map(str, m))
+    print(rez4)
+
+    n =[1,-8,7,5]
+    rez5 = list(map(str, map(f5,m,n)))
+    print(rez5)
 
 if __name__ == '__main__':
     main()
