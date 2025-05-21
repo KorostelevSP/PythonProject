@@ -33,7 +33,7 @@ def main():
     print(rez4)
 
     n =[1,-8,7,5]
-    rez5 = list(map(str, map(f5,m,n)))
+    rez5 = tuple(map(str, map(f5,m,n)))
     print(rez5)
 
 if __name__ == '__main__':
