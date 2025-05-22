@@ -25,7 +25,6 @@ def main():
     rez1 = list(filter(f1,m))
     print(rez1)
 
-
     new_n = my_filter(f2,m)
     print(new_n)
     rez2 = list(filter(f2, m))
