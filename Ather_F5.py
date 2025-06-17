@@ -24,6 +24,7 @@ def main():
     while a != 0:
         if a % 10 == 7:
             flag = ('Yes')
+            break
         a = a // 10
     print(flag)
 
